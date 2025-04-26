@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Book Haven - Community</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="community.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
-      rel="stylesheet"
-    />
-      
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="community.css" />
+    
+    
   </head>
-  <body>
+  <!-- 行内 CSS：视口高度和 flex 布局，以及标题和正文的字体、大小设置 -->
+  <body style="display: flex; flex-direction: column; min-height: 100vh; color: #131C26;">
     <!-- Header -->
     <header class="header">
       <div class="header-container">
@@ -28,7 +29,7 @@
         <!-- 修复logo div闭合位置 -->
 
         <nav class="nav-links">
-          <a href="index.html" class="title">Home</a>
+          <a href="home.html" class="title">Home</a>
           <!-- 主页 -->
           <a href="gallery.html" class="title">Gallery</a>
           <!-- 画廊页 -->
@@ -38,115 +39,117 @@
           <!-- 社区页 -->
         </nav>
       </div>
-    </header>
+      </header>
 
     <!-- Main Content -->
-    <main class="main-content">
-      <!-- Influencer Section -->
-
-      
-    <main>  
-      <!-- 修改后的HTML结构 -->
+    <main class="main-content" style="flex: 1;">
+      <!-- Featured Influencers Section -->
       <section class="community-section">
-        <h2 class="section-heading">Featured Influencers</h2>
+        <!-- Title -->
+        <h2 class="section-heading" style="font-family: 'Arial Bold', sans-serif; font-size: 25px; color: #2D3748;">Featured Influencers</h2>
         <div class="influencer-grid">
           <!-- Influencer 1 -->
           <article class="influencer-card">
             <div class="influencer-photo" style="background-image: url('influencer1.jpg')"></div>
             <div class="influencer-content">
-              <h3>Literary Influencer</h3>
-              <p class="influencer-desc">Weekly book recommendations and in-depth reviews</p>
+              <!-- Subtitle -->
+              <h3 style="font-family: 'Comfortaa', sans-serif; font-size: 15px; color: #2B6CB0;">Literary Influencer</h3>
+              <!-- Body Large -->
+              <p class="influencer-desc" style="font-family: 'Calibri', sans-serif; font-size: 20px; color: #4A5568;">Weekly book recommendations and in-depth reviews</p>
               <div class="comment">
-                <span class="name">Sarah J.</span>
-                <span class="comment-date">2023-08-15</span>
+                <!-- Captions -->
+                <span class="name" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">Sarah J.</span>
+                <span class="comment-date" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">2023-08-15</span>
               </div>
             </div>
           </article>
-      
+
           <!-- Influencer 2 -->
           <article class="influencer-card">
             <div class="influencer-photo" style="background-image: url('influencer2.jpg')"></div>
             <div class="influencer-content">
-              <h3>Book Critic</h3>
-              <p class="influencer-desc">Analyzing classic literature themes</p>
+              <h3 style="font-family: 'Comfortaa', sans-serif; font-size: 15px; color: #2B6CB0;">Book Critic</h3>
+              <p class="influencer-desc" style="font-family: 'Calibri', sans-serif; font-size: 20px; color: #4A5568;">Analyzing classic literature themes</p>
               <div class="comment">
-                <span class="name">Michael R.</span>
-                <span class="comment-date">2023-08-14</span>
+                <span class="name" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">Michael R.</span>
+                <span class="comment-date" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">2023-08-14</span>
               </div>
             </div>
           </article>
-      
+
           <!-- Influencer 3 -->
           <article class="influencer-card">
             <div class="influencer-photo" style="background-image: url('influencer3.jpg')"></div>
             <div class="influencer-content">
-              <h3>Storyteller</h3>
-              <p class="influencer-desc">Creative writing tips and workshops</p>
+              <h3 style="font-family: 'Comfortaa', sans-serif; font-size: 15px; color: #2B6CB0;">Storyteller</h3>
+              <p class="influencer-desc" style="font-family: 'Calibri', sans-serif; font-size: 20px; color: #4A5568;">Creative writing tips and workshops</p>
               <div class="comment">
-                <span class="name">Emma W.</span>
-                <span class="comment-date">2023-08-13</span>
+                <span class="name" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">Emma W.</span>
+                <span class="comment-date" style="font-family: 'Arial Bold', sans-serif; font-size: 11px; color: #4A5568;">2023-08-13</span>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Community Engagement -->
+      <!-- Community Engagement Section -->
       <section class="community-section">
-        <h2 class="section-heading">Community Engagement</h2>
+        <h2 class="section-heading" style="font-family: 'Arial Bold', sans-serif; font-size: 25px; color: #2D3748;">Community Engagement</h2>
         <div class="engagement-grid">
-          <!-- User Content -->
+          <!-- Reader Reviews -->
           <div class="engagement-card user-content">
             <div class="content-photo"></div>
             <div class="content-meta">
-              <h3>Reader Reviews</h3>
-              <p>Browse over 5,000+ authentic reviews</p>
-              <button class="btn btn-view">View Collection</button>
+              <h3 style="font-family: 'Comfortaa', sans-serif; font-size: 15px; color: #2B6CB0;">Reader Reviews</h3>
+              <p style="font-family: 'Calibri', sans-serif; font-size: 16px; color: #131C26;">Browse over 5,000+ authentic reviews</p>
+              <button class="btn btn-view" style="font-family: 'Calibri Bold', sans-serif; font-size: 16px;">View Collection</button>
             </div>
           </div>
 
-          <!-- Events -->
+          <!-- Monthly Events -->
           <div class="engagement-card event">
             <div class="event-calendar">
-              <div class="calendar-header">Monthly Events</div>
+              <div class="calendar-header" style="font-family: 'Arial Bold', sans-serif; font-size: 11px;">Monthly Events</div>
               <div class="event-list">
                 <div class="event-item">
-                  <time>15</time>
-                  <span>Author Meetup</span>
+                  <time datetime="2025-05-15" style="font-family: 'Calibri Bold', sans-serif; font-size: 16px;">15</time>
+                  <span style="font-family: 'Calibri', sans-serif; font-size: 16px;">Author Meetup</span>
                 </div>
-                <!-- Other event items -->
+                <!-- 更多活动项 -->
               </div>
             </div>
           </div>
 
-
+        </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <nav class="footer-links">
-          <a href="#gallery">Gallery</a>
-          <a href="#about">About Us</a>
-          <a href="#community">Community</a>
-        </nav>
-        <div class="auth-buttons">
-          <button class="btn sign-in">Sign in</button>
-          <button class="btn log-in">Log in</button>
+      <div class="footer-container">
+        <div class="footer-top">
+          <nav class="footer-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#community">Community</a>
+          </nav>
+          <div class="auth-buttons">
+            <button class="btn sign-in">Sign in</button>
+            <button class="btn log-in">Log in</button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© Photo, inc. 2025. We love our users!</p>
+          <div class="social-links">
+            <span class="follow-text">Follow us</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="copyright">© Photo, inc. 2019. We love our users!</p>
-        <div class="social-links">
-          <span class="follow-text">Follow us</span>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-        </div>
-      </div>
-    </div>
     </footer>
+    <!-- 在</body>结束前需要添加 -->
+    <script src="cart.js"></script>
   </body>
 </html>

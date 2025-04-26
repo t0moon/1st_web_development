@@ -1,13 +1,16 @@
+/* 主内容容器 */
 .main-content {
   max-width: 1280px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* 社区模块通用间距 */
 .community-section {
   margin-bottom: 3rem;
 }
 
+/* 模块标题样式 */
 .section-heading {
   font-size: 1.5rem;
   font-weight: 600;
@@ -17,11 +20,12 @@
   padding-bottom: 0.5rem;
 }
 
-/* Influencer Grid */
+/* 达人网格布局（核心修改区域） */
 .influencer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自动适配列数，最小300px */
+  gap: 2rem; /* 统一网格间距 */
+  padding: 1rem 0;
 }
 
 .influencer-card {
@@ -30,14 +34,23 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.3s ease;
+  /* 移除margin:0.5rem（避免与grid-gap冲突） */
 }
 
 .influencer-card:hover {
   transform: translateY(-5px);
 }
 
+/* 达人卡片图片区域（补充原代码缺失的样式） */
+.influencer-photo {
+  height: 250px; /* 固定图片高度 */
+  background: #EDF2F7; /* 占位背景色 */
+  background-size: cover; /* 图片覆盖容器 */
+  background-position: center; /* 图片居中 */
+  border-radius: 0.75rem 0.75rem 0 0; /* 与卡片顶部圆角一致 */
+}
 
-
+/* 达人卡片内容区域 */
 .influencer-content {
   padding: 1.25rem;
 }
@@ -52,7 +65,7 @@
   line-height: 1.6;
 }
 
-/* Engagement Grid */
+/* 互动网格布局 */
 .engagement-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -60,22 +73,24 @@
 }
 
 .engagement-card {
-  background: white;
+  background: rgb(252, 249, 249);
   border-radius: 0.75rem;
   padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(179, 48, 48, 0.05);
 }
 
+/* 用户内容图片 */
 .user-content .content-photo {
   height: 180px;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
-  background: #EDF2F7;
+  background: #124a82;
 }
 
+/* 查看按钮样式 */
 .btn-view {
   background: #2B6CB0;
-  color: white;
+  color: rgb(244, 242, 242);
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.375rem;
@@ -88,6 +103,7 @@
   background: #2C5282;
 }
 
+/* 活动日历 */
 .event-calendar {
   background: #F7FAFC;
   border-radius: 0.5rem;
@@ -111,6 +127,7 @@
   color: #2B6CB0;
 }
 
+/* 照片墙 */
 .photo-wall {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -120,63 +137,28 @@
 
 .photo-item {
   aspect-ratio: 1;
-  background: #EDF2F7;
+  background: #172d44;
   border-radius: 0.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .engagement-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .engagement-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .gallery {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 767px) {
-  .influencer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.influencer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 固定3列 */
-  gap: 2rem; /* 增加间距 */
-  padding: 1rem 0;
-}
-
-.influencer-card {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  margin: 0.5rem;
-}
-
-.influencer-photo {
-  height: 250px;
-  background: #EDF2F7;
-  background-size: cover;
-  background-position: center;
-}
-
-/* 响应式调整 */
+/* 响应式设计（调整.influencer-grid的适配规则） */
 @media (max-width: 1024px) {
   .influencer-grid {
-    grid-template-columns: repeat(2, 1fr); /* 中等屏幕显示2列 */
+    grid-template-columns: repeat(2, 1fr); /* 中等屏幕强制2列 */
   }
 }
 
 @media (max-width: 768px) {
   .influencer-grid {
-    grid-template-columns: 1fr; /* 小屏幕显示1列 */
+    grid-template-columns: 1fr; /* 小屏幕单栏 */
+  }
+  .engagement-grid {
+    grid-template-columns: 1fr; /* 互动网格小屏幕单栏 */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .engagement-grid {
+    grid-template-columns: repeat(2, 1fr); /* 中等屏幕互动网格2列 */
   }
 }
