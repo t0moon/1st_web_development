@@ -1,0 +1,102 @@
+.about-main {
+  max-width: 1280px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.about-section {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2B6CB0;
+}
+
+/* 历史内容 */
+.history-content {
+  line-height: 1.8;
+  color: #4A5568;
+  max-width: 800px;
+}
+
+/* 营业时间 */
+.hours-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.hours-item {
+  display: flex;
+  gap: 2rem;
+  padding: 0.75rem;
+  background: #4A5568;;
+  border-radius: 0.5rem;
+}
+
+.hours-day {
+  font-weight: 500;
+  min-width: 120px;
+}
+
+/* 联系表单 */
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #2D3748;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #CBD5E0;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2B6CB0;
+  box-shadow: 0 0 0 1px #2B6CB0;
+}
+
+.submit-btn {
+  background: #2B6CB0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  justify-self: start;
+}
+
+.submit-btn:hover {
+  background: #2C5282;
+}
+
+@media (max-width: 768px) {
+  .hours-item {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+}

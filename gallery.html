@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Haven - Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cart.css" />
+
+    <!-- 新增 CSS 开始 -->
+    <style>
+      /* 为 main 区域添加底色 */
+      .site-main {
+        background-color: #f5f5f5; /* 可根据需求修改颜色 */
+        padding: 20px;
+      }
+
+      /* 将四个产品按两列排布 */
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* 控制行列间距 */
+      }
+
+      /* 给每个产品项加上红色边框 */
+      .photo-item {
+        border: 2px;
+        padding: 10px;
+        box-sizing: border-box #2e2e4e;
+        background-color: #fff; /* 可选：让内容框有白底以增强对比 */
+      }
+      .view-cart-wrapper {
+        display: flex; /* 启用弹性布局 */
+        justify-content: center; /* 水平居中对齐子元素 */
+        margin-top: 20px; /* 与上方内容拉开距离，可按需调整 */
+      }
+    </style>
+    <!-- 新增 CSS 结束 -->
+  </head>
+
+  <body>
+    <!-- Header（保持不变） -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="imgs/logo.png" alt="bookstore Logo" />
+          <h1 class="page-title">Book Haven</h1>
+        </div>
+        <!-- 修复logo div闭合位置 -->
+
+        <nav class="nav-links">
+          <a href="index.html" class="title">Home</a>
+          <!-- 主页 -->
+          <a href="gallery.html" class="title">Gallery</a>
+          <!-- 画廊页 -->
+          <a href="aboutus.html" class="title">About Us</a>
+          <!-- 关于页 -->
+          <a href="community.html" class="title">Community</a>
+          <!-- 社区页 -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- 页面指示条 -->
+    <div class="page-indicator">GALLERY</div>
+
+    <!-- Main Content（已调整） -->
+    <main class="site-main">
+      <section class="gallery-section">
+        <!-- H2 标题 -->
+        <h2 class="section-heading" style="color: #131c26">Let's shopping</h2>
+
+        <!-- 灰底 + 边框容器 -->
+        <div class="gallery-wrapper">
+          <div class="photo-grid">
+            <!-- 修正后的四个产品项 -->
+            <div class="photo-item">
+              <img
+                src="imgs/book1.png"
+                alt="Book 1"
+                class="photo-image"
+                data-price="19.99"
+              />
+              <button class="btn btn-add-cart" type="button">
+                Add to cart
+              </button>
+            </div>
+
+            <div class="photo-item">
+              <img
+                src="imgs/book2.png"
+                alt="Book 2"
+                class="photo-image"
+                data-price="29.99"
+              />
+              <button class="btn btn-add-cart" type="button">
+                Add to cart
+              </button>
+            </div>
+
+            <div class="photo-item">
+              <img
+                src="imgs/book3.png"
+                alt="Book 3"
+                class="photo-image"
+                data-price="39.99"
+              />
+              <button class="btn btn-add-cart" type="button">
+                Add to cart
+              </button>
+            </div>
+
+            <div class="photo-item">
+              <img
+                src="imgs/book4.png"
+                alt="Book 4"
+                class="photo-image"
+                data-price="49.99"
+              />
+              <button class="btn btn-add-cart" type="button">
+                Add to cart
+              </button>
+            </div>
+          </div>
+
+          <!-- 底部 “view cart” -->
+          <div class="view-cart-wrapper">
+            <button class="btn btn-view-cart" type="button">view cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <nav class="footer-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#community">Community</a>
+          </nav>
+          <div class="auth-buttons">
+            <button class="btn sign-in">Sign in</button>
+            <button class="btn log-in">Log in</button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© Photo, inc. 2025. We love our users!</p>
+          <div class="social-links">
+            <span class="follow-text">Follow us</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- 在</body>结束前需要添加 -->
+    <script src="cart.js"></script>
+  </body>
+</html>

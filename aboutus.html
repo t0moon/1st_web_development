@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Book Haven</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="aboutus.css" />
+    <!-- +++ Add Comfortaa Font +++ -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Use existing header structure -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="imgs/logo.png" alt="bookstore Logo" />
+          <h1 class="page-title">Book Haven</h1>
+        </div>
+        <!-- Fix logo div closing position -->
+
+        <nav class="nav-links">
+          <a href="home.html" class="title">Home</a>
+          <!-- Home -->
+          <a href="gallery.html" class="title">Gallery</a>
+          <!-- Gallery -->
+          <a href="aboutus.html" class="title">About Us</a>
+          <!-- About Us -->
+          <a href="community.html" class="title">Community</a>
+          <!-- Community -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="about-main">
+      <!-- History Introduction -->
+      <section class="about-section">
+        <h2 class="section-heading">Our History</h2>
+        <div class="history-content">
+          <p>
+            Since its founding in 1999, Book Haven has been dedicated to providing readers with high-quality reading experiences. We grew from a small corner store into a cultural landmark of the city, witnessing countless stories of readers' growth.
+          </p>
+          <!-- Can add more paragraphs -->
+        </div>
+      </section>
+
+      <!-- Business Hours -->
+      <section class="about-section">
+        <h2 class="section-heading">Business Hours</h2>
+        <ul class="hours-list">
+          <li class="hours-item">
+            <span class="hours-day">Monday to Friday</span>
+            <span>9:00 AM - 8:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="hours-day">Saturday</span>
+            <span>10:00 AM - 9:00 PM</span>
+          </li>
+          <li class="hours-item">
+            <span class="hours-day">Sunday</span>
+            <span>10:00 AM - 6:00 PM</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="about-section">
+        <h2 class="section-heading">Contact Us</h2>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input type="text" id="name" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              class="form-input"
+              pattern="[0-9]{10}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message/Custom Request</label>
+            <textarea
+              id="message"
+              class="form-input"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Use existing footer structure -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <nav class="footer-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#community">Community</a>
+          </nav>
+          <div class="auth-buttons">
+            <button class="btn sign-in">Sign in</button>
+            <button class="btn log-in">Log in</button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© Photo, inc. 2019. We love our users!</p>
+          <div class="social-links">
+            <span class="follow-text">Follow us</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

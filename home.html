@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Haven - Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- +++ 添加Comfortaa字体 +++ -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 页眉 + 导航 -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="imgs/logo.png" alt="bookstore Logo" />
+          <h1 class="page-title">Book Haven</h1>
+        </div>
+        <!-- 修复logo div闭合位置 -->
+
+        <nav class="nav-links">
+          <a href="index.html" class="title">Home</a>
+          <!-- 主页 -->
+          <a href="gallery.html" class="title">Gallery</a>
+          <!-- 画廊页 -->
+          <a href="aboutus.html" class="title">About Us</a>
+          <!-- 关于页 -->
+          <a href="community.html" class="title">Community</a>
+          <!-- 社区页 -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Banner（空白斜切） -->
+    <section class="section intro-section">
+      <!-- +++ 应用标题样式 +++ -->
+      <h2 class="section-title title">About Our Bookstore</h2>
+      <!-- +++ 应用正文字体 +++ -->
+      <p class="section-text body">
+        Our library was founded in 2025. Committed to promoting knowledge - sharing, it offers a wide range of books, from classic literature to modern science works. With comfortable reading areas and advanced facilities, it serves as a haven for book - lovers. Regular events like book - sharing sessions are held to foster a vibrant reading community. 
+      </p>
+    </section>
+
+    <main class="main-content">
+      <!-- 促销信息条（3 列布局） -->
+      <section class="section promo-info">
+        <!-- +++ 调整促销信息结构 +++ -->
+        <div class="promo-item">
+          <!-- +++ 副标题样式 +++ -->
+          <h3 class="promo-title subtitle">Buy One, Get One Free</h3>
+          <!-- +++ 大号正文字体 +++ -->
+          <p class="promo-text-detail body-large">
+            Pick any two books from our selected categories, and take them both home for the price of one. 
+          </p>
+        </div>
+        <div class="promo-item">
+          <h3 class="promo-title subtitle">Join and Reap the Rewards!</h3>
+          <p class="promo-text-detail body-large">
+          Sign - up during this promotional period, and you'll receive a free tote bag filled with bookish goodies. 
+          </p>
+        </div>
+        <div class="promo-item">
+          <h3 class="promo-title subtitle">Dive into Savings!</h3>
+          <p class="promo-text-detail body-large">
+            We're having an exclusive book sale where you can snag your favorite novels, thrilling mysteries, and educational textbooks at up to 50% off
+          </p>
+        </div>
+      </section>
+
+      <!-- 促销卡片区域 -->
+      <section class="section promo-area">
+      <!-- 卡片容器（包裹所有卡片） -->
+      <div class="promo-cards">
+        <!-- 第一张促销卡片 -->
+        <div class="promo-card">
+          <div class="promo-image">
+            <img src="imgs/homepic2.png" alt="帆布托特包促销图">
+          </div>
+          <p class="card-text body-strong">
+            A canvas tote bag with black lettering that says "ALL I DO IS READ READ READ"
+          </p>
+        </div>
+      
+        <!-- 第二张促销卡片（从嵌套中移出，与第一张平级） -->
+        <div class="promo-card">
+          <div class="promo-image">
+            <img src="imgs/homepic1.png" alt="书店主题笔记本促销图">
+          </div>
+          <p class="card-text body-strong">
+            A notebook with text on the cover that says "Book Haven Bookstore"
+          </p>
+        </div>
+      </div>
+      </section>  
+      
+
+      <!-- 选择理由 -->
+      <section class="section why-shop">
+        <h3 class="section-title title">WHY SHOP HERE</h3>
+        <ul class="reason-list">
+          <!-- +++ 说明性文字样式 +++ -->
+          <li class="captions"> an extensive collection</li>
+          <li class="captions"> immersive reading</li>
+          <li class="captions">a variety of events</li>
+        </ul>
+      </section>
+    </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <nav class="footer-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Us</a>
+        <a href="#community">Community</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn sign-in">Sign in</button>
+        <button class="btn log-in">Log in</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© Photo, inc. 2025. We love our users!</p>
+      <div class="social-links">
+        <span class="follow-text">Follow us</span>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+  </div>
+  </footer>
+</body>
+</html>

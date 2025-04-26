@@ -1,0 +1,170 @@
+/* ====================
+   全局变量 & Reset
+   ==================== */
+:root {
+  /* 颜色变量 */
+  --bg-main: #f5f5f5;
+  --bg-item: #fff;
+  --border-item: 2px solid #2e2e4e;
+  --badge-bg: #2e2e4e;
+  --badge-color: #fff;
+
+  /* 间距变量 */
+  --gap: 20px;
+  --padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====================
+     Body & 主区域
+     ==================== */
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: var(--bg-main);
+  color: #333;
+}
+
+.site-main {
+  background: var(--bg-main);
+  padding: var(--gap);
+}
+
+/* ====================
+     产品网格
+     ==================== */
+/* 外层可选，若需灰色底或额外边距再使用 */
+.gallery-wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.cart-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  /* 最少250px，一行多列或自动换行 */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--gap);
+}
+
+/* 单个产品项 */
+.photo-item {
+  background: var(--bg-item);
+  border: var(--border-item);
+  border-radius: 4px;
+  padding: var(--padding);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.photo-item:hover {
+  transform: scale(1.03);
+}
+
+.photo-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--padding);
+}
+
+/* 添加购物按钮 */
+.btn-add-cart {
+  margin-top: auto;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.btn-add-cart:hover {
+  background: #1f1f2e;
+}
+
+/* ====================
+     查看购物车 按钮
+     ==================== */
+.view-cart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: var(--gap) 0 0;
+}
+
+.btn-view-cart {
+  position: relative;
+  padding: 8px 16px;
+  border: none;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-view-cart::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75em;
+}
+
+/* ====================
+     购物车模态框
+     ==================== */
+.cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content {
+  background: var(--bg-item);
+  padding: var(--gap);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  margin: var(--padding) 0;
+  padding-bottom: var(--padding);
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--gap);
+}
+
+/* ====================
+     响应式调整
+     ==================== */
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
