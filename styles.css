@@ -37,15 +37,32 @@ body {
   align-items: center;
   gap: 1rem;
 }
+.header-container,
+.main-content,
+.footer-container {
+  width: 100%;         /* 在所有视口都先铺满 */
+  max-width: 1280px;   /* 再限制最大宽度 */
+  margin: 0 auto;      /* 大屏仍可居中 */
+  padding: 0 1rem;     /* 留出左右小内边距 */
+}
+
 @media (max-width: 768px) {
   .header-container,
   .main-content,
+  .promo-card {
+    min-width: 0;           /* 取消固定最小宽度 */
+    flex: 1 1 100%;         /* 卡片宽度自适应，强制换行 */
+  }
   .footer-container {
     width: 100%;
     margin: 0;           /* 取消 auto 居中，防止收缩 */
     padding: 0 1rem;     /* 保留左右小边距 */
   }
 }
+
+
+
+
 
 /* Logo 在第一列 */
 .logo {
