@@ -37,6 +37,15 @@ body {
   align-items: center;
   gap: 1rem;
 }
+@media (max-width: 768px) {
+  .header-container,
+  .main-content,
+  .footer-container {
+    width: 100%;
+    margin: 0;           /* 取消 auto 居中，防止收缩 */
+    padding: 0 1rem;     /* 保留左右小边距 */
+  }
+}
 
 /* Logo 在第一列 */
 .logo {
@@ -280,3 +289,4 @@ body {
 .follow-text {
   color: #FFFFFF; /* 文字颜色修复 */
 }
+
