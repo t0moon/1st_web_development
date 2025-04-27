@@ -24,16 +24,15 @@
           <h1 class="page-title">Book Haven</h1>
         </div>
         <!-- 修复logo div闭合位置 -->
-
+        <button class="hamburger" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+    
         <nav class="nav-links">
           <a href="index.html" class="title">Home</a>
-          <!-- 主页 -->
           <a href="gallery.html" class="title">Gallery</a>
-          <!-- 画廊页 -->
           <a href="aboutus.html" class="title">About Us</a>
-          <!-- 关于页 -->
           <a href="community.html" class="title">Community</a>
-          <!-- 社区页 -->
         </nav>
       </div>
     </header>
@@ -138,5 +137,14 @@
     </div>
   </div>
   </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav-links');
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    });
+</script>
 </body>
 </html>
