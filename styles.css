@@ -30,6 +30,7 @@ body {
 }
 
 .header-container {
+  position: relative; /* 参照定位 */
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -103,6 +104,16 @@ body {
 }
 
 /* --------- 导航 --------- */
+.hamburger {
+  display: none;
+  position: relative; /* 为菜单定位 */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #131C26;
+  cursor: pointer;
+  z-index: 1001;
+}
 .nav-links {
   grid-column: 3;
   display: flex;
@@ -119,6 +130,37 @@ body {
   text-decoration: underline;
 }
 
+/* --------- 移动端：汉堡 & 菜单 --------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 0.5rem); /* 距离按钮底部 */
+    right: 1rem;              /* 与按钮右侧对齐 */
+    background: #3E5641;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s;
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #fff !important;
+  }
+}
 /* --------- Hero Banner --------- */
 .hero-banner {
   position: relative;
